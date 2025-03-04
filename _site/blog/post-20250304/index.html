@@ -3,14 +3,182 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Tea and Scones Press | Independent Publishing</title>
-		<meta name="description" content="Tea and Scones Press is a boutique publishing company dedicated to bringing extraordinary stories to life.">
+		<title>Announcing the Launch of Tea and Scones Press</title>
+		<meta name="description" content="We are thrilled to announce that Tea and Scones Press Pty Ltd has arrived on the scene.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Tea and Scones Press">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 		
-		<style>/* This is an arbitrary CSS string added to the bundle */
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
 /* Fluid images via https://www.zachleat.com/web/fluid-images/ */
 img{
   max-width: 100%;
@@ -634,112 +802,24 @@ textarea.form-control {
 	    </nav>
 		
 		
-  <header class="hero-section">
-    <div class="hero-content">
-      <h1 class="company-name" id="tea-and-scones-press">Tea and Scones Press</h1>
-      <p class="subtitle">Bringing extraordinary stories to life</p>
-    </div>
-    <div class="hero-image">
-      <!-- Image is positioned via CSS -->
-    </div>
-  </header>
+<h1 id="announcing-the-launch-of-tea-and-scones-press">Announcing the Launch of Tea and Scones Press</h1>
 
-  <main class="main-content">
-    <section id="about" class="section">
-      <div class="container">
-        <h1 class="section-title" id="about-us-our-story-founded-in-2025-tea-and-scones-press-is-a-boutique-publishing-house-dedicated-to-amplifying-unique-voices-and-untold-stories-we-believe-that-great-literature-has-the-power-to-transform-lives-and-broaden-perspectives-our-small-but-passionate-team-of-editors-designers-and-publishing-professionals-work-closely-with-authors-to-craft-beautiful-books-that-resonate-with-readers-we-pride-ourselves-on-our-personalized-approach-and-commitment-to-quality-over-quantity-at-tea-and-scones-press-we-re-not-just-publishing-books-we-re-building-lasting-relationships-with-authors-and-readers-alike-our-publishing-philosophy-we-specialize-in-literary-fiction-literary-analysis-creative-non-fiction-and-poetry-that-challenges-conventions-and-explores-the-depth-of-human-experience-while-we-re-selective-about-the-projects-we-take-on-we-re-committed-to-fostering-diverse-voices-and-innovative-storytelling-each-book-we-publish-receives-the-same-level-of-care-and-attention-from-manuscript-development-through-design-production-marketing-and-beyond">About Us
-        <h2 id="our-story">Our Story</h2>
-<p>Founded in 2025, Tea and Scones Press is a boutique publishing house dedicated to amplifying unique voices and untold stories. We believe that great literature has the power to transform lives and broaden perspectives.</p>
-<p>Our small but passionate team of editors, designers, and publishing professionals work closely with authors to craft beautiful books that resonate with readers. We pride ourselves on our personalized approach and commitment to quality over quantity.</p>
-<p>At Tea and Scones Press, we're not just publishing books—we're building lasting relationships with authors and readers alike.</p>
-<h2 id="our-publishing-philosophy">Our Publishing Philosophy</h2>
-<p>We specialize in literary fiction, literary analysis, creative non-fiction, and poetry that challenges conventions and explores the depth of human experience. While we're selective about the projects we take on, we're committed to fostering diverse voices and innovative storytelling.</p>
-<p>Each book we publish receives the same level of care and attention, from manuscript development through design, production, marketing, and beyond.</p>
+<ul class="post-metadata">
+	<li><time datetime="2025-03-04">04 March 2025</time></li>
+	<li><a href="/tags/launch/" class="post-tag">launch</a></li>
+</ul>
 
-      </h1></div>
-    </section>
+<p>We are thrilled to announce that Tea and Scones Press Pty Ltd has arrived on the scene and is actively accepting manuscripts and well-developed ideas for new books.</p>
+<p>We are an independent publisher of fiction, non-fiction and poetry based in Australia. Our books go out to Amazon and Apple Books in both ebook and paperback formats.</p>
+<p>Please see our <a href="https://teaandsconespress.com/#write">Write a Book</a> instructions to join us!</p>
 
-    <section id="write" class="section alternate">
-      <div class="container">
-        <h1 class="section-title" id="write-a-book-includes-partials-write-book-njk-do-you-have-a-manuscript-that-pushes-boundaries-and-tells-a-compelling-story-we-re-always-looking-for-fresh-voices-to-join-our-publishing-family-do-you-have-an-idea-characters-and-a-plot-but-are-struggling-to-write-the-bulk-of-the-prose-do-you-want-to-write-a-nonfiction-book-to-assist-marketing-your-business-but-dont-have-time-to-write-the-entire-work-we-have-the-latest-in-ai-tools-to-help-you-complete-your-work-please-get-in-touch-1-submit-send-us-your-manuscript-or-proposal-through-our-submission-form-we-review-every-submission-carefully-2-develop-if-selected-we-ll-work-closely-with-you-to-refine-and-develop-your-manuscript-to-its-fullest-potential-3-publish-your-book-will-receive-expert-design-production-and-marketing-support-as-we-bring-it-to-readers-we-will-work-closely-with-you-to-help-keep-the-project-to-your-budget-submit-your-manuscript">Write a Book
-        <!-- _includes/partials/write-book.njk -->
-<div class="write-section">
-  <p>Do you have a manuscript that pushes boundaries and tells a compelling story? We're always looking for fresh voices to join our publishing family.</p>
-  <p>Do you have an idea, characters, and a plot, but are struggling to write the bulk of the prose? Do you want to write a nonfiction book to assist marketing your business but don't have time to write the entire work? We have the latest in AI tools to help you complete your work. Please get in touch.</p>
-  
-  <div class="publishing-process">
-    <div class="process-step">
-      <h3 id="1-submit">1. Submit</h3>
-      <p>Send us your manuscript or proposal through our submission form. We review every submission carefully.</p>
-    </div>
-    
-    <div class="process-step">
-      <h3 id="2-develop">2. Develop</h3>
-      <p>If selected, we'll work closely with you to refine and develop your manuscript to its fullest potential.</p>
-    </div>
-    
-    <div class="process-step">
-      <h3 id="3-publish">3. Publish</h3>
-      <p>Your book will receive expert design, production, and marketing support as we bring it to readers. We will work closely with you to help keep the project to your budget.</p>
-    </div>
-  </div>
-  
-  <div class="cta-container">
-    <a href="#contact" class="btn">Submit Your Manuscript</a>
-  </div>
-</div>
-
-
-      </h1></div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <h1 class="section-title" id="contact-us-includes-partials-contact-form-njk-interested-in-working-with-us-or-have-a-question-we-d-love-to-hear-from-you-name-email-subject-manuscript-submission-publishing-query-other-message-send-message">Contact Us
-        <!-- _includes/partials/contact-form.njk -->
-<div class="contact-section">
-  <p>Interested in working with us or have a question? We'd love to hear from you!</p>
-  
-  <form class="contact-form">
-    <div class="form-group">
-      <label for="name" class="form-label">Name</label>
-      <input type="text" id="name" name="name" class="form-control" required="">
-    </div>
-    
-    <div class="form-group">
-      <label for="email" class="form-label">Email</label>
-      <input type="email" id="email" name="email" class="form-control" required="">
-    </div>
-    
-    <div class="form-group">
-      <label for="subject" class="form-label">Subject</label>
-      <select id="subject" name="subject" class="form-control">
-        <option value="Manuscript Submission">Manuscript Submission</option>
-        <option value="Publishing Query">Publishing Query</option>
-        <option value="General Query">Other</option>
-      </select>
-    </div>
-    
-    <div class="form-group">
-      <label for="message" class="form-label">Message</label>
-      <textarea id="message" name="message" class="form-control" required=""></textarea>
-    </div>
-    
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-</div>
-
-
-      </h1></div>
-    </section>
-  </main>
 
 
 		  <footer class="site-footer">
 		    <div class="container">
 		      <div class="footer-content">
 		        <div class="footer-info">
-		          <h3 id="tea-and-scones-press-2">Tea and Scones Press</h3>
+		          <h3 id="tea-and-scones-press">Tea and Scones Press</h3>
 		          <p>Suite 26, 2190 Gold Coast Hwy<br>Miami QLD 4220<br>Australia</p>
 		          <p>info@teaandsconespress.com</p>
 		        </div>
