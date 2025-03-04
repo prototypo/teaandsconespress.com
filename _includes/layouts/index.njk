@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+---
+
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1 class="company-name">Tea and Scones Press</h1>
+      <p class="subtitle">Bringing extraordinary stories to life</p>
+    </div>
+    <div class="hero-image">
+      <!-- Image is positioned via CSS -->
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section id="about" class="section">
+      <div class="container">
+        <h1 class="section-title">About Us</h2>
+        {{ content | safe }}
+      </div>
+    </section>
+
+    <section id="write" class="section alternate">
+      <div class="container">
+        <h1 class="section-title">Write a Book</h2>
+        {% include "partials/write-book.njk" %}
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h1 class="section-title">Contact Us</h2>
+        {% include "partials/contact-form.njk" %}
+      </div>
+    </section>
+  </main>

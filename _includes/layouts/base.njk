@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ title or metadata.title }}</title>
+		<meta name="description" content="{{ description or metadata.description }}">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
+		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+
+		{#-
+		Plain-text bundles are provided via the `eleventy-plugin-bundle` plugin:
+		1. CSS:
+			* Add to a per-page bundle using `{% css %}{% endcss %}`
+			* Retrieve bundle content using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
+		2. Or for JavaScript:
+			* Add to a per-page bundle using `{% js %}{% endjs %}`
+			* Retrieve via `{% getBundle "js" %}` or `{% getBundleFileUrl "js" %}`
+		3. Learn more: https://github.com/11ty/eleventy-plugin-bundle
+		#}
+
+		{#- Add an arbitrary string to the bundle #}
+		{%- css %}/* This is an arbitrary CSS string added to the bundle */{% endcss %}
+		{#- Add the contents of a file to the bundle #}
+		{%- css %}{% include "public/css/index.css" %}{% endcss %}
+		{%- css %}{% include "public/css/styles.css" %}{% endcss %}
+		{#- Or you can add from node_modules #}
+		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
+
+		{#- Render the CSS bundle using inlined CSS (for the fastest site performance in production) #}
+		<style>{% getBundle "css" %}</style>
+		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
+		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
+
+		{#- Add the heading-anchors web component to the JavaScript bundle #}
+		{%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
+	</head>
+	
+	<body>
+	    <nav class="main-nav">
+	      <div class="container nav-container">
+	        <a href="/" class="logo">Tea and Scones Press</a>
+	        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+	          <span class="hamburger"></span>
+	        </button>
+	        <ul class="nav-links">
+	          <li><a href="/books">Our Books</a></li>
+	          <li><a href="/blog">Blog</a></li>
+	          <li><a href="/#about">About</a></li>
+	          <li><a href="/#write">Write a Book</a></li>
+	          <li><a href="/#contact">Contact</a></li>
+	        </ul>
+	      </div>
+	    </nav>
+		
+		{{ content | safe }}
+
+		  <footer class="site-footer">
+		    <div class="container">
+		      <div class="footer-content">
+		        <div class="footer-info">
+		          <h3>Tea and Scones Press</h3>
+		          <p>Suite 26, 2190 Gold Coast Hwy<br>Miami QLD 4220<br>Australia</p>
+		          <p>info@teaandsconespress.com</p>
+		        </div>
+		        <div class="footer-nav">
+		          <h4>Navigation</h4>
+		          <ul>
+		            <li><a href="#about">About</a></li>
+		            <li><a href="#write">Write a Book</a></li>
+		            <li><a href="#contact">Contact</a></li>
+		          </ul>
+		        </div>
+		        <div class="footer-social">
+		          <h4>Connect</h4>
+		          <div class="social-links">
+		            <a href="#" aria-label="Twitter">Twitter</a>
+		            <a href="#" aria-label="Instagram">Instagram</a>
+		            <a href="#" aria-label="Facebook">Facebook</a>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="copyright">
+		        &copy; {{ page.date.getFullYear() }} Tea and Scones Press. All rights reserved.
+		      </div>
+		    </div>
+		  </footer>
+  
+		  <script src="/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- _includes/partials/contact-form.njk -->
+<div class="contact-section">
+  <p>Interested in working with us or have a question? We'd love to hear from you!</p>
+  
+  <form class="contact-form">
+    <div class="form-group">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" id="name" name="name" class="form-control" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" id="email" name="email" class="form-control" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="subject" class="form-label">Subject</label>
+      <select id="subject" name="subject" class="form-control">
+        <option value="Manuscript Submission">Manuscript Submission</option>
+        <option value="Publishing Query">Publishing Query</option>
+        <option value="General Query">Other</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="message" class="form-label">Message</label>
+      <textarea id="message" name="message" class="form-control" required></textarea>
+    </div>
+    
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</div>
+

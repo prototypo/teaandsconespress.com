@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tea and Scones Press | Independent Publishing</title>
+		<meta name="description" content="Tea and Scones Press is a boutique publishing company dedicated to bringing extraordinary stories to life.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Eleventy Base Blog v9">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Posts list */
+div.posts {
+	width: 40em;
+	text-align: center
+	width: 500px;
+	margin: 0 auto;
+}
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+/* src/css/styles.css */
+:root {
+  --color-primary: #1a365d;
+  --color-secondary: #718096;
+  --color-accent: #ed8936;
+  --color-light: #f7fafc;
+  --color-dark: #2d3748;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Source Sans Pro', sans-serif;
+  --container-width: 1200px;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Enhanced typography for h1, h2 and p tags */
+h2 {
+  padding-left: 1.5rem;
+  font-size: 2rem;
+  color: var(--color-primary);
+  /* border-left: 4px solid var(--color-accent); */
+  margin-top: 2rem;
+}
+
+h2 {
+  padding-left: 1.5rem;
+  font-size: 2rem;
+  color: var(--color-primary);
+  border-left: 4px solid var(--color-accent);
+  margin-top: 2rem;
+}
+
+p {
+  padding-left: 1.5rem;
+  font-size: 1.125rem; /* Slightly larger than default */
+  margin-bottom: 1.25rem;
+  /* max-width: 80ch; /* For better readability */
+}
+
+/* Pastel blue background for main content */
+main, .main-content {
+  background-color: #e6f0ff; /* Soft pastel blue */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Make sure the pastel background works well with sections */
+.section:not(.alternate) {
+  background-color: transparent;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.75rem;
+    padding-left: 1rem;
+  }
+  
+  p {
+    padding-left: 1rem;
+    font-size: 1.05rem;
+  }
+  
+  main, .main-content {
+    padding: 1.5rem;
+  }
+}
+
+/* Navigation */
+.main-nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: relative;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-primary);
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+  transform: translateY(-8px);
+}
+
+.hamburger::after {
+  transform: translateY(8px);
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  height: 100vh;
+  padding-top: 80px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 2rem;
+}
+
+.company-name {
+  font-size: 3.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  max-width: 600px;
+}
+
+.hero-image {
+  width: 50%;
+  background-image: url('/img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Main Content Sections */
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.alternate {
+  background-color: #f1f5f9;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2c5282;
+  color: white;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 3rem 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.footer-info,
+.footer-nav,
+.footer-social {
+  margin-bottom: 1.5rem;
+}
+
+.footer-info h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-nav h4,
+.footer-social h4 {
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+}
+
+.footer-nav ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-nav a,
+.footer-social a {
+  color: white;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-social a:hover {
+  opacity: 1;
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .hero-content,
+  .hero-image {
+    width: 100%;
+  }
+  
+  .hero-image {
+    height: 50vh;
+  }
+  
+  .section {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links.show {
+    height: auto;
+    padding: 1rem 0;
+  }
+  
+  .nav-links li {
+    margin: 0;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .mobile-menu-toggle.active .hamburger {
+    background-color: transparent;
+  }
+  
+  .mobile-menu-toggle.active .hamburger::before {
+    transform: translateY(0) rotate(45deg);
+  }
+  
+  .mobile-menu-toggle.active .hamburger::after {
+    transform: translateY(0) rotate(-45deg);
+  }
+  
+  .company-name {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-info,
+  .footer-nav,
+  .footer-social {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}</style>
+	</head>
+	
+	<body>
+	    <nav class="main-nav">
+	      <div class="container nav-container">
+	        <a href="/" class="logo">Tea and Scones Press</a>
+	        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+	          <span class="hamburger"></span>
+	        </button>
+	        <ul class="nav-links">
+	          <li><a href="books.html">Our Books</a></li>
+	          <li><a href="/blog">Blog</a></li>
+	          <li><a href="#about">About</a></li>
+	          <li><a href="#write">Write a Book</a></li>
+	          <li><a href="#contact">Contact</a></li>
+	        </ul>
+	      </div>
+	    </nav>
+		
+		
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1 class="company-name" id="tea-and-scones-press">Tea and Scones Press</h1>
+      <p class="subtitle">Bringing extraordinary stories to life</p>
+    </div>
+    <div class="hero-image">
+      <!-- Image is positioned via CSS -->
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section id="about" class="section">
+      <div class="container">
+        <h1 class="section-title" id="about-us-our-story-founded-in-2025-tea-and-scones-press-is-a-boutique-publishing-house-dedicated-to-amplifying-unique-voices-and-untold-stories-we-believe-that-great-literature-has-the-power-to-transform-lives-and-broaden-perspectives-our-small-but-passionate-team-of-editors-designers-and-publishing-professionals-work-closely-with-authors-to-craft-beautiful-books-that-resonate-with-readers-we-pride-ourselves-on-our-personalized-approach-and-commitment-to-quality-over-quantity-at-tea-and-scones-press-we-re-not-just-publishing-books-we-re-building-lasting-relationships-with-authors-and-readers-alike-our-publishing-philosophy-we-specialize-in-literary-fiction-literary-analysis-creative-non-fiction-and-poetry-that-challenges-conventions-and-explores-the-depth-of-human-experience-while-we-re-selective-about-the-projects-we-take-on-we-re-committed-to-fostering-diverse-voices-and-innovative-storytelling-each-book-we-publish-receives-the-same-level-of-care-and-attention-from-manuscript-development-through-design-production-marketing-and-beyond">About Us
+        <h2 id="our-story">Our Story</h2>
+<p>Founded in 2025, Tea and Scones Press is a boutique publishing house dedicated to amplifying unique voices and untold stories. We believe that great literature has the power to transform lives and broaden perspectives.</p>
+<p>Our small but passionate team of editors, designers, and publishing professionals work closely with authors to craft beautiful books that resonate with readers. We pride ourselves on our personalized approach and commitment to quality over quantity.</p>
+<p>At Tea and Scones Press, we're not just publishing books—we're building lasting relationships with authors and readers alike.</p>
+<h2 id="our-publishing-philosophy">Our Publishing Philosophy</h2>
+<p>We specialize in literary fiction, literary analysis, creative non-fiction, and poetry that challenges conventions and explores the depth of human experience. While we're selective about the projects we take on, we're committed to fostering diverse voices and innovative storytelling.</p>
+<p>Each book we publish receives the same level of care and attention, from manuscript development through design, production, marketing, and beyond.</p>
+
+      </h1></div>
+    </section>
+
+    <section id="write" class="section alternate">
+      <div class="container">
+        <h1 class="section-title" id="write-a-book-includes-partials-write-book-njk-do-you-have-a-manuscript-that-pushes-boundaries-and-tells-a-compelling-story-we-re-always-looking-for-fresh-voices-to-join-our-publishing-family-1-submit-send-us-your-manuscript-or-proposal-through-our-submission-form-we-review-every-submission-carefully-2-develop-if-selected-we-ll-work-closely-with-you-to-refine-and-develop-your-manuscript-to-its-fullest-potential-3-publish-your-book-will-receive-expert-design-production-and-marketing-support-as-we-bring-it-to-readers-submit-your-manuscript">Write a Book
+        <!-- _includes/partials/write-book.njk -->
+<div class="write-section">
+  <p>Do you have a manuscript that pushes boundaries and tells a compelling story? We're always looking for fresh voices to join our publishing family.</p>
+  
+  <div class="publishing-process">
+    <div class="process-step">
+      <h3 id="1-submit">1. Submit</h3>
+      <p>Send us your manuscript or proposal through our submission form. We review every submission carefully.</p>
+    </div>
+    
+    <div class="process-step">
+      <h3 id="2-develop">2. Develop</h3>
+      <p>If selected, we'll work closely with you to refine and develop your manuscript to its fullest potential.</p>
+    </div>
+    
+    <div class="process-step">
+      <h3 id="3-publish">3. Publish</h3>
+      <p>Your book will receive expert design, production, and marketing support as we bring it to readers.</p>
+    </div>
+  </div>
+  
+  <div class="cta-container">
+    <a href="#contact" class="btn">Submit Your Manuscript</a>
+  </div>
+</div>
+
+
+      </h1></div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h1 class="section-title" id="contact-us-includes-partials-contact-form-njk-interested-in-working-with-us-or-have-a-question-we-d-love-to-hear-from-you-name-email-subject-manuscript-submission-publishing-query-other-message-send-message">Contact Us
+        <!-- _includes/partials/contact-form.njk -->
+<div class="contact-section">
+  <p>Interested in working with us or have a question? We'd love to hear from you!</p>
+  
+  <form class="contact-form">
+    <div class="form-group">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" id="name" name="name" class="form-control" required="">
+    </div>
+    
+    <div class="form-group">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" id="email" name="email" class="form-control" required="">
+    </div>
+    
+    <div class="form-group">
+      <label for="subject" class="form-label">Subject</label>
+      <select id="subject" name="subject" class="form-control">
+        <option value="manuscript">Manuscript Submission</option>
+        <option value="query">Publishing Query</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="message" class="form-label">Message</label>
+      <textarea id="message" name="message" class="form-control" required=""></textarea>
+    </div>
+    
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</div>
+
+
+      </h1></div>
+    </section>
+  </main>
+
+
+		  <footer class="site-footer">
+		    <div class="container">
+		      <div class="footer-content">
+		        <div class="footer-info">
+		          <h3 id="tea-and-scones-press-2">Tea and Scones Press</h3>
+		          <p>Suite 26, 2190 Gold Coast Hwy<br>Miami QLD 4220<br>Australia</p>
+		          <p>info@teaandsconespress.com</p>
+		        </div>
+		        <div class="footer-nav">
+		          <h4 id="navigation">Navigation</h4>
+		          <ul>
+		            <li><a href="#about">About</a></li>
+		            <li><a href="#write">Write a Book</a></li>
+		            <li><a href="#contact">Contact</a></li>
+		          </ul>
+		        </div>
+		        <div class="footer-social">
+		          <h4 id="connect">Connect</h4>
+		          <div class="social-links">
+		            <a href="#" aria-label="Twitter">Twitter</a>
+		            <a href="#" aria-label="Instagram">Instagram</a>
+		            <a href="#" aria-label="Facebook">Facebook</a>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="copyright">
+		        &copy; 2025 Tea and Scones Press. All rights reserved.
+		      </div>
+		    </div>
+		  </footer>
+  
+		  <script src="/js/main.js"></script>
+	</body>
+</html>
