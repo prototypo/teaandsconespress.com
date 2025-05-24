@@ -16,7 +16,7 @@ description: Tea and Scones Press is a boutique publishing company dedicated to 
         
         <div class="book">
 
-!["Jane Eyre - Ultimate Study Guide cover"](./img/cover-365-Day-Journal-to-Survive-and-Thrive-A-Year-of-Buddhist-Wisdom-thumbnail.jpg)
+<img alt="Jane Eyre - Ultimate Study Guide cover" src="/img/cover-365-Day-Journal-to-Survive-and-Thrive-A-Year-of-Buddhist-Wisdom-thumbnail.jpg">
 
             <div class="description">
                 <h2>365 Day Journal to Survive and Thrive - A Year of Buddhist Wisdom</h2>
@@ -38,7 +38,7 @@ Romance readers will adore the fresh setting of Perle Cachée, an idyllic island
         
         <div class="book">
 
-!["Echoes of the Heart cover"](./img/cover-Echoes-of-the-Heart-thumbnail.jpg)
+!["Echoes of the Heart cover"](/img/cover-Echoes-of-the-Heart-thumbnail.jpg)
 
             <div class="description">
                 <h2>Echoes of the Heart - A Polynesian Affair Book I</h2>
@@ -60,7 +60,7 @@ If the original illustrations are available, we include those too!
         
         <div class="book">
 
-!["Jane Eyre - Ultimate Study Guide cover"](./img/cover-Jane-Eyre-Ultimate-Study-Guide-thumbnail.jpg)
+!["Jane Eyre - Ultimate Study Guide cover"](/img/cover-Jane-Eyre-Ultimate-Study-Guide-thumbnail.jpg)
 
             <div class="description">
             
@@ -74,7 +74,7 @@ If the original illustrations are available, we include those too!
         
         <div class="book">
 
-!["Alice's Adventures in Wonderland - Ultimate Study Guide cover"](./img/cover-Alice's-Adventures-in-Wonderland-Ultimate-Study-Guide-thumbnail.jpg)
+!["Alice's Adventures in Wonderland - Ultimate Study Guide cover"](/img/cover-Alice's-Adventures-in-Wonderland-Ultimate-Study-Guide-thumbnail.jpg)
 
             <div class="description">
                 <h2>Alice's Adventures in Wonderland - Ultimate Study Guide</h2>
