@@ -16,7 +16,7 @@ description: Tea and Scones Press is a boutique publishing company dedicated to 
         
         <div class="book">
 
-<img alt="Jane Eyre - Ultimate Study Guide cover" src="/img/cover-365-Day-Journal-to-Survive-and-Thrive-A-Year-of-Buddhist-Wisdom-thumbnail.jpg">
+<img alt="365 Day Journal to Survive and Thrive - A Year of Buddhist Wisdom cover" src="/img/cover-365-Day-Journal-to-Survive-and-Thrive-A-Year-of-Buddhist-Wisdom-thumbnail.jpg">
 
             <div class="description">
                 <h2>365 Day Journal to Survive and Thrive - A Year of Buddhist Wisdom</h2>

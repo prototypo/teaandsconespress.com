@@ -1,2 +1,2 @@
 #!/bin/bash
-npx @11ty/eleventy --formats=html,njk,gif,jpg,css --serve
+npx @11ty/eleventy --pathprefix --formats=html,njk,gif,jpg,css --serve

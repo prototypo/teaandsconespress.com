@@ -2,7 +2,7 @@ import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+//import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 import pluginFilters from "./_config/filters.js";
 
@@ -71,7 +71,7 @@ export default async function(eleventyConfig) {
 			}
 		}
 	});
-
+/*DHW
 	// Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		// Output formats for each image.
@@ -92,7 +92,7 @@ export default async function(eleventyConfig) {
 			animated: true,
 		},
 	});
-
+*/
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);
 
@@ -151,5 +151,5 @@ export const config = {
 	// it will transform any absolute URLs in your HTML to include this
 	// folder name and does **not** affect where things go in the output folder.
 
-	pathPrefix: "/",
+	//pathPrefix: "/",
 };
