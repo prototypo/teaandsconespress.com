@@ -68,6 +68,7 @@ If the original illustrations are available, we include those too!
                 <p>Available now!</p>
                 
 * [Amazon Kindle edition](https://www.amazon.com.au/Jane-Eyre-Ultimate-Study-Guides-ebook/dp/B0DZXVWMFY/)
+* [Apple Books edition](http://books.apple.com/us/book/id6746742728)
 
             </div>
         </div>
@@ -81,6 +82,7 @@ If the original illustrations are available, we include those too!
                 <p>Available now!</p>
 
 * [Amazon Kindle edition](https://www.amazon.com.au/Alices-Adventures-Wonderland-Ultimate-Study-ebook/dp/B0F2MDXR9L/)
+* [Apple Books edition](http://books.apple.com/us/book/id6747022601)
 
             </div>
         </div>
