@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Create a mailto: URL from the form
   function createMailtoUrl(form) {
-    const recipientName = encodeURIComponent(form.name.value.trim());
-    const recipientEmail = encodeURIComponent(form.email.value.trim());
+    const recipientName = encodeURIComponent('Tea and Scones Press');
+    const recipientEmail = encodeURIComponent('info@teaandsconespress.com');
 	const selectedIndex = form.subject.selectedIndex;
     const subject = encodeURIComponent(form.subject.options[selectedIndex].value);
-    const body = encodeURIComponent(form.message.value.trim());
+    const body = encodeURIComponent(form.name.value.trim() + "(" + form.email.value.trim() + "): \n\n" + form.message.value.trim());
   
     // Create the mailto URL with proper encoding
     const mailtoUrl = `mailto:${recipientName} <${recipientEmail}>?subject=${subject}&body=${body}`;
