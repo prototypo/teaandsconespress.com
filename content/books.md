@@ -20,11 +20,12 @@ description: Tea and Scones Press is a boutique publishing company dedicated to 
 
             <div class="description">
                 <h2>365 Day Journal to Survive and Thrive - A Year of Buddhist Wisdom</h2>
+                <h3>by David Hyland-Wood</h3>
                 <p>Available now!</p>
 
 * [Amazon hardcover edition](https://www.amazon.com/365-Day-Journal-Survive-Thrive/dp/1764018656/)
 * [Amazon paperback edition](https://www.amazon.com/365-Day-Journal-Survive-Thrive/dp/1764018664/)
-* 
+
             </div>
         </div>
 
@@ -42,6 +43,7 @@ Romance readers will adore the fresh setting of Perle Cachée, an idyllic island
 
             <div class="description">
                 <h2>Echoes of the Heart - A Polynesian Affair Book I</h2>
+                <h3>by Camille Fontaine</h3>
                 <p>Available now!</p>
                 
 * [Amazon Kindle edition](https://www.amazon.com/Echoes-Heart-Polynesian-Camille-Fontaine-ebook/dp/B0DZ5QBCT1/)
@@ -65,6 +67,7 @@ If the original illustrations are available, we include those too!
             <div class="description">
             
                 <h2>Jane Eyre - Ultimate Study Guide</h2>
+                <h3>by Charlotte Brontë and David Hyland-Wood</h3>
                 <p>Available now!</p>
                 
 * [Amazon Kindle edition](https://www.amazon.com.au/Jane-Eyre-Ultimate-Study-Guides-ebook/dp/B0DZXVWMFY/)
@@ -79,6 +82,7 @@ If the original illustrations are available, we include those too!
 
             <div class="description">
                 <h2>Alice's Adventures in Wonderland - Ultimate Study Guide</h2>
+                <h3>by Lewis Carroll and David Hyland-Wood</h3>
                 <p>Available now!</p>
 
 * [Amazon Kindle edition](https://www.amazon.com.au/Alices-Adventures-Wonderland-Ultimate-Study-ebook/dp/B0F2MDXR9L/)
