@@ -24,6 +24,8 @@ description: Tea and Scones Press is a boutique publishing company dedicated to 
                 
                 <p>If you're a veteran living with chronic pain, you're not alone, and you can heal.</p>
                 
+                <p>Discover how at <a href="https://shiftmypain.com">shiftmypain.com</a>.</p>
+                
 					<p>One in three veterans struggles with chronic pain, often feeling like they've tried everything without success. Traditional approaches focus on managing symptoms, but Breakthrough
 offers something different: a proven method to reclaim your life from pain's grip.</p>
 
