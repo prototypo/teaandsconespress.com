@@ -19,7 +19,9 @@ description: Tea and Scones Press is a boutique publishing company dedicated to 
             <div class="description">
                 <h2>Room 119</h2>
                 <h3>by Michelle Stewart</h3>
-                <p>Coming soon!</p>
+					<p>Available now!</p>
+
+* [Amazon Kindle edition](https://www.amazon.com/dp/B0FXDNRC25)
 
             </div>
         </div>

@@ -16,11 +16,12 @@ description: Tea and Scones Press is a boutique publishing company dedicated to 
         
         <div class="book">
 
-<img alt="Breakthrough cover" src="/img/cover-breakthrough-cover-tmp.jpg">
+<img alt="Breakthrough cover" src="/img/cover-breakthrough-tmp.png">
 
             <div class="description">
                 <h2>Breakthrough &mdash; A Veterans Roadmap from Chronic Pain to Renewed Strength</h2>
                 <h3>by David Hyland-Wood</h3>
+                
                 <p>If you're a veteran living with chronic pain, you're not alone, and you can heal.</p>
                 
 					<p>One in three veterans struggles with chronic pain, often feeling like they've tried everything without success. Traditional approaches focus on managing symptoms, but Breakthrough
@@ -45,7 +46,7 @@ same determination to your healing.</p>
 
 					<p>Stop letting pain define your story. Your breakthrough is waiting.</p>
 					
-                <p>Coming soon!</p>
+                <p class="comingsoon">Coming soon!</p>
 
             </div>
         </div>
