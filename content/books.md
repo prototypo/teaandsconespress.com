@@ -12,6 +12,26 @@ description: Tea and Scones Press is a boutique publishing company dedicated to 
 
 <div class="book-container">
 
+## Family Stories
+        
+        <div class="book">
+
+<img alt="Room 119 cover" src="/img/cover-rm-119.jpg">
+
+            <div class="description">
+                <h2><a class="bookheaderlink" href="/ourbooks/room119/">Room 119</a></h2>
+                <h3>by Michelle Stewart</h3>
+                <p>Available now!</p>
+
+* [Amazon Kindle edition](https://www.amazon.com/dp/B0FXDNRC25)
+
+            </div>
+        </div>
+
+</div>
+
+<div class="book-container">
+
 ## 365 Day Journals
         
         <div class="book">
