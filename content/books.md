@@ -12,6 +12,27 @@ description: Tea and Scones Press is a boutique publishing company dedicated to 
 
 <div class="book-container">
 
+## Health and Wellbeing
+        
+        <div class="book">
+
+<img alt="Room 119 cover" src="/img/breakthrough-cover-web.jpg">
+
+            <div class="description">
+                <h2><a class="bookheaderlink" href="/ourbooks/breakthrough/">Breakthrough - A Veterans Roadmap from Chronic Pain to Renewed Strength</a></h2>
+                <h3>by David Hyland-Wood</h3>
+                <p>Available now!</p>
+
+* [Amazon Kindle edition](https://www.amazon.com/dp/B0HQGHWMBC/)
+* Amazon paperback coming late November 2026!
+
+            </div>
+        </div>
+
+</div>
+
+<div class="book-container">
+
 ## Family Stories
         
         <div class="book">
