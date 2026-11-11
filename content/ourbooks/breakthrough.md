@@ -22,6 +22,7 @@ description: Tea and Scones Press is a boutique publishing company dedicated to 
 					<p>Available now!</p>
 
 * [Amazon Kindle edition](https://www.amazon.com/dp/B0HQGHWMBC/)
+* [Apple Books edition](http://books.apple.com/us/book/id6832429659)
 
             </div>
         </div>
