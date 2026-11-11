@@ -12,11 +12,6 @@
 	</url>
 	
 	<url>
-		<loc>https://teaandsconespress.com/books/</loc>
-		<lastmod>2025-05-24</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://teaandsconespress.com/</loc>
 		<lastmod>2025-05-24</lastmod>
 	</url>
@@ -32,17 +27,22 @@
 	</url>
 	
 	<url>
-		<loc>https://teaandsconespress.com/ourbooks/breakthrough/</loc>
-		<lastmod>2025-09-17</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://teaandsconespress.com/ourbooks/room119/</loc>
 		<lastmod>2025-09-17</lastmod>
 	</url>
 	
 	<url>
+		<loc>https://teaandsconespress.com/ourbooks/breakthrough/</loc>
+		<lastmod>2026-11-11</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://teaandsconespress.com/books/</loc>
+		<lastmod>2026-11-11</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://teaandsconespress.com/feed/feed.xml</loc>
-		<lastmod>2026-11-09</lastmod>
+		<lastmod>2026-11-11</lastmod>
 	</url>
 </urlset>
